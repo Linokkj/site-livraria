@@ -124,7 +124,107 @@
 #prev { left: 10px; }
 #next { right: 10px; }
 
+.secao{
+    max-width: 1200px;
+    margin: 0;
+}
 
+.topo{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
 
+}
 
+.titulo{
+    font-size: 32px;
+    font-weight: 700;
+}
 
+.ver-mais{
+    color: red ;
+    font-weight: bold;
+}
+
+.carouselS{
+    position: relative;
+}
+
+.botao-nav{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: transparent;
+    cursor: pointer; 
+}
+.esquerda{ left: -5px;}
+.direita{ right: -5px;}
+
+.faixa{display: flex;
+gap:var(--gap) ;
+overflow: auto;
+padding: 10px 40px;
+scroll-snap-type:x mandatory ;
+}
+
+.faixa::-webkit-scrollbar{ display: none;}
+
+.card{
+    min-width: 220px;
+    background: black;
+    padding: 10px;
+    position: relative;
+    scroll-snap-align: start;
+    border-radius: 6px;
+}
+.capa{
+    width: 100%;
+    aspect-ratio: 2/3;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.capa img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.etiqueta{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background: red;
+    padding: 4px 8px;
+    font-size: 12px;
+    font-weight: bold;
+    border-radius: 4px;
+
+}
+
+.desconto{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: yellow;
+    padding: 4px 8px;
+    font-size: 12px;
+    font-weight: bold;
+    border-radius: 4px;
+}
+
+.cashback{
+    position: absolute;
+    bottom: 70px;
+    left: 10px;
+    background: #06a88a;
+    padding: 4px 8px;
+    font-weight: bold;
+    border-radius: 4px;
+}
+
+.titulo-card{
+    margin-top: 10px;
+    font-size: 15px ;
+    font-weight: 700;
+}
