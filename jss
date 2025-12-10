@@ -95,3 +95,5 @@ function criarCarrossel(faixaId, btnEsqId, btnDirId) {
 
 criarCarrossel("faixa", "btnEsquerda", "btnDireita");
 criarCarrossel("faixa2", "btnEsquerda2", "btnDireita2");
+criarCarrossel("faixa3", "btnEsquerda3", "btnDireita3");
+criarCarrossel("faixa4", "btnEsquerda4", "btnDireita4");
