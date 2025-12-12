@@ -2,14 +2,14 @@ body {
     margin: 0; /*remove a margem padrão do navegador*/
     padding: 0%; /*é o espaço interno de um elemento — a distância entre o conteúdo e a borda.*/
     font: arial, sans-serif;
-    background-color: #333
+    background-color: #333;
 }
-.topo{
-    background-color: rgba(255, 0, 0, 0.712);
+.topop{
+    background-color: rgb(0, 0, 0);
 }
 
 .logo img{
-    height: 100px; /*define a altura da logo*/
+    height: 90px; /*define a altura da logo*/
 }
 
 .inicial{
@@ -24,55 +24,112 @@ body {
 .busca{ 
     display: flex;
     flex: 1; /*a busca cresce para ocupar espaço */
-    max-width: 600px;
-    margin: 0 20px /*espaço à direita e esquerda*/
+    max-width: 500px;
+    margin: 0px 20px 10px 70px;
 }
 
 .busca input{
     width: 100%; /*Define a largura de um elemento*/
-    padding: 10px; /*é o espaço interno de um elemento — a distância entre o conteúdo e a borda.*/
+    padding: 1%; /*é o espaço interno de um elemento — a distância entre o conteúdo e a borda.*/
     border: none;
     border-radius: 3px 0px 0px 3px ; /*arredonda só o lado esquerdo*/
-    color: black;
+
 }
 
 .busca button{
     padding:  10px 15px ;/*é o espaço interno de um elemento — a distância entre o conteúdo e a borda.*/
     border: none;
-    background: white;
+    background: rgb(255, 255, 255);
     border: 0px 3px;
-    color: black;
+    border-radius: 0px 3px 3px 0px;
+
 }
 
 .icone img {
     margin-left: 15px;
-    cursor: pointer;
     height: 22px;
     border: none; /* remove borda */
     cursor: pointer; /* deixa o cursor como “mãozinha” ao passar por cima */
-    mix-blend-mode: multiply; /* remove o fundo da img */
-    cursor: pointer;
+    color: #fff;
+    background: transparent;
+    border-radius: 5px;
 }
 
-.Tlista{margin: auto; /*remove a margem padrão do navegador*/
-    width: 100%; /*Define a largura de um elemento*/
-    align-items: center;
+.lista {
+    background: rgba(255, 0, 0, 0.712);;
+    padding: 1px 0;
+}
+
+nav ul {
+    list-style: none;
     display: flex;
-    list-style-type: none;
-    justify-content: space-around ; /*deixa um em cada ponta*/
-    background-color: rgba(255, 0, 0, 0.712);
-    }
-  
-.Tlista li{
-  cursor: pointer;
-}   
-    
-.Tlista img{
-    height: 30px;
-    mix-blend-mode: multiply; /* remove o fundo da img */
-    cursor: pointer;
+    justify-content: center;
+    gap: 40px;
 }
 
+nav ul li {
+    position: relative;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 10px;
+    display: block;
+}
+
+nav ul li p {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 10px;
+    display: block;
+}
+
+/* CONTAINER DO MEGA MENU */
+.Tlista {
+    position: absolute;
+    left: 0;
+    top: 100%;
+    background: white;
+    width: 500px;
+    padding: 20px;
+    display: none;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    border-radius: 5px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    z-index: 999;
+    align-items: center;
+}
+
+
+nav ul li:hover .Tlista {
+    display: grid;
+}
+
+
+.Tlista a {
+    color: #333;
+    font-size: 16px;
+    text-decoration: none;
+    padding: 5px 0;
+
+}
+
+.Tlista p {
+    color: #333;
+    font-size: 16px;
+    text-decoration: none;
+    padding: 5px 0;
+}
+
+.Tlista a:hover {
+    color: rgba(255, 0, 0, 0.712);
+}
 
 .carousel {
     width: 100%;
@@ -84,20 +141,20 @@ body {
 }
 
 #slide {
-    width: 80%;
-    height: 250px;
+    width: 95%;
+    height: 280px;
     transition: opacity .5s;
 }
 
 .btn {
     position: absolute;
-    background: #333;
+    background: transparent;
     border: none;
     color: rgba(255, 0, 0, 0.712);
     font-size: 30px;
     padding: 10px;
     cursor: pointer;
-    top: 50%;
+    top: 55%;
     transform: translateY(-100%);
 }
 
@@ -115,18 +172,21 @@ body {
 }
 
 .secao{
-  max-width:1200px;
+  width: 97%;
   margin:auto;
 }
 
 .topo{
   display:flex;
   justify-content:space-between;
+  background-color: rgba(255, 0, 0, 0.712);
+  color: white;
 }
 
 .titulo{
   font-size:32px;
   font-weight:700;
+  
 }
 
 .ver-mais{
@@ -242,28 +302,6 @@ body {
   scroll-snap-type:x mandatory;
 }
 
-.cadastros{
-   position: relative; /* Define o contexto de posicionamento para os filhos */
-   width: 100%; /* Ou a largura desejada para sua imagem/bloco */
-   margin: auto; /* Centraliza o bloco na página, opcional */
-}
-
-.formulario{
-  display: flex;
-  position: absolute; 
-  bottom: 10px; 
-  align-items: center;
-  color: white;
-  font-size: 18px;
-  border-radius: 5px;
-  justify-content: flex-end;
-}
-
-.cadastroimg{
-  width: 100%;
-  height: 650px;
-}
-
 
 .containe-footer{
   display: flex;
@@ -304,4 +342,4 @@ body {
   background: transparent;
   cursor: pointer;
   flex-wrap: wrap;
-}
+}                                                                                                                                                                                                                                                                                                 
