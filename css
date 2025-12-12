@@ -51,6 +51,7 @@ body {
     border: none; /* remove borda */
     cursor: pointer; /* deixa o cursor como “mãozinha” ao passar por cima */
     mix-blend-mode: multiply; /* remove o fundo da img */
+    cursor: pointer;
 }
 
 .Tlista{margin: auto; /*remove a margem padrão do navegador*/
@@ -60,12 +61,16 @@ body {
     list-style-type: none;
     justify-content: space-around ; /*deixa um em cada ponta*/
     background-color: rgba(255, 0, 0, 0.712);
-    
     }
   
+.Tlista li{
+  cursor: pointer;
+}   
+    
 .Tlista img{
     height: 30px;
     mix-blend-mode: multiply; /* remove o fundo da img */
+    cursor: pointer;
 }
 
 
@@ -86,14 +91,14 @@ body {
 
 .btn {
     position: absolute;
-    background: rgba(255, 255, 255, 0.5);
+    background: #333;
     border: none;
     color: rgba(255, 0, 0, 0.712);
     font-size: 30px;
     padding: 10px;
     cursor: pointer;
     top: 50%;
-    transform: translateY(-50%);
+    transform: translateY(-100%);
 }
 
 #prev { left: 10px; }
@@ -157,7 +162,7 @@ body {
 .faixa::-webkit-scrollbar{ display:none; }
 
 .card{
-  min-width:220px;
+  min-width:200px;
   background:var(--cor-card);
   padding:10px;
   border-radius:6px;
@@ -174,7 +179,7 @@ body {
 
 .capa img{
   width:100%;
-  height:100%;
+  height:105%;
   object-fit:cover;
 }
 
