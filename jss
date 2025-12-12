@@ -1,3 +1,40 @@
+const termos = [
+  "Harry Potter",
+  "O Senhor dos Anéis",
+  "Coraline",
+  "Duna",
+  "O Nome do Vento",
+  "Drácula",
+  "Five Nights At Freddy's",
+  "Batman",
+  "One Piece",
+  "Sonic",
+  "Invincible",
+  "O Exorcista",
+  "A Arte de Fazer Milhão",
+  "O Pescador",
+  "Fantasmópolis",
+  "Gravity Falls"
+];
+
+const campo = document.getElementById("campoBusca");
+const lista = document.getElementById("sugestoes");
+
+campo.addEventListener("input", () => {
+  const texto = campo.value.toLowerCase();
+  lista.innerHTML = ""; // limpa antes de adicionar
+
+  if (texto.length === 0) return;
+
+  const filtrados = termos.filter(t => t.toLowerCase().includes(texto));
+
+  filtrados.forEach(item => {
+    const option = document.createElement("option");
+    option.value = item;
+    lista.appendChild(option);
+  });
+});
+
 let imagens = [
     "https://leitura.com.br/image/cache/catalog/BANNER%20%C3%81LBUM%20DISNEY%202-1920x300.png",
     "https://leitura.com.br/image/cache/catalog/Banner%20-%20site%20Leitura%201920%20x%20300%20px%20(1)-1920x300.jpg",
